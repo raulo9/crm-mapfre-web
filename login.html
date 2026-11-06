@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Agentes | Seguros Zurbano</title>
+    <link rel="stylesheet" type="text/css" href="estilos/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body data-pagina="login">
+
+    <nav class="navbar">
+        <a href="index.html" id="logo">SEGUROS ZURBANO</a>
+        <input type="checkbox" id="check">
+        <label for="check" id="checkboton"><i class="fa-solid fa-bars"></i></label>
+        <ul class="menu-items">
+            <li><a href="index.html" class="btn-nav-especial"><i class="fa-solid fa-house"></i> Volver a la web</a></li>
+        </ul>
+    </nav>
+
+    <div class="login-container">
+        <div class="login-box">
+            <i class="fa-solid fa-user-tie" style="font-size: 3.5rem; color: #D32F2F; margin-bottom: 15px;"></i>
+            <h2 style="color: #D32F2F; margin-bottom: 20px;">Acceso Privado</h2>
+
+            <p id="error" style="color: #D32F2F; font-weight: bold; margin-bottom: 15px; background: rgba(211,47,47,0.1); padding: 10px; border-radius: 10px; display:none;"></p>
+
+            <form id="form-login" class="formulario">
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <button type="submit">INICIAR SESIÓN</button>
+            </form>
+
+            <p style="margin-top: 20px; font-size: 13px; color: #555; background: rgba(0,0,0,0.04); padding: 12px; border-radius: 10px; line-height: 1.5;">
+                <strong>Versión demo</strong><br>
+                Usuario: <code>demo@zurbano.es</code><br>
+                Contraseña: <code>demo1234</code><br>
+                <span style="font-size: 12px;">Los datos se guardan solo en tu navegador.</span>
+            </p>
+        </div>
+    </div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

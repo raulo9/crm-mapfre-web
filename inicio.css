@@ -1,0 +1,77 @@
+#agente-info {
+    padding: 40px 20px;
+    background: #f9f9f9;
+    display: flex;
+    justify-content: center;
+}
+
+.perfil-agente {
+    background: white;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-top: 5px solid #D32F2F;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.perfil-agente i { font-size: 60px; color: #D32F2F; }
+
+.vias-contacto a {
+    display: block;
+    color: #D32F2F;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+
+#servicios { padding: 60px 20px; background: #fff; }
+.principal-titulo { text-align: center; margin-bottom: 50px; }
+
+.contenedor-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.tarjeta {
+    padding: 30px;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.tarjeta:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.tarjeta i { font-size: 50px; color: #D32F2F; margin-bottom: 20px; }
+
+#contacto { background: #f4f4f4; padding: 70px 20px; }
+.form-contenedor { max-width: 600px; margin: 0 auto; text-align: center; }
+
+.formulario { display: flex; flex-direction: column; gap: 15px; margin-top: 30px; }
+.formulario input, .formulario textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.formulario button {
+    background: #D32F2F;
+    color: white;
+    padding: 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.formulario button:hover { background: #222; }
+
+.letraEDU { font-family: 'Rubik Marker Hatch', cursive; }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Cliente | Seguros Zurbano</title>
+    <link rel="stylesheet" type="text/css" href="estilos/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body data-pagina="nuevoCliente">
+    <nav class="navbar">
+        <span id="logo" style="color: white; font-weight: bold; font-size: 20px;">NUEVO CLIENTE</span>
+        <input type="checkbox" id="check">
+        <label for="check" id="checkboton"><i class="fa-solid fa-bars"></i></label>
+        <ul class="menu-items">
+            <li><a href="solicitudes.html" class="btn-nav-especial" ><i class="fa-solid fa-xmark"></i> Cancelar</a></li>
+        </ul>
+    </nav>
+
+    <div class="panel-container" style="max-width: 500px; margin-top: 120px;">
+        <h2 style="color: #D32F2F; margin-bottom: 20px;"><i class="fa-solid fa-user-plus"></i> Alta de Cliente Manual</h2>
+        <p id="error" style="color: #D32F2F; background: rgba(211,47,47,0.1); padding: 10px; border-radius: 10px; margin-bottom: 15px; font-weight: bold; display:none;"></p>
+        <form id="form" class="formulario">
+            <input type="text" name="nombre" placeholder="Nombre completo del cliente" required>
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <input type="tel" name="movil" placeholder="Teléfono de contacto">
+            <button type="submit"><i class="fa-solid fa-floppy-disk"></i> GUARDAR CLIENTE</button>
+        </form>
+    </div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

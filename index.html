@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguros Zurbano | Jose Luis Blanco</title>
+    <link rel="stylesheet" type="text/css" href="estilos/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body data-pagina="index">
+
+    <nav class="navbar">
+        <a href="index.html" id="logo">SEGUROS ZURBANO</a> 
+        <input type="checkbox" id="check"> 
+        <label for="check" id="checkboton"><i class="fa-solid fa-bars"></i></label>
+        
+        <ul class="menu-items">
+    <li><a class="actual" href="#hero-section">Inicio</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="historia.html">Historia</a></li>   
+    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="login.html" class="btn-nav-especial"><i class="fa-solid fa-lock"></i> Acceso</a></li>
+    </ul>
+    </nav>
+
+    <header id="hero-section">
+    <div class="hero-contenido">
+        <span class="subtitulo-hero">ASESORÍA EXCLUSIVA MAPFRE</span>
+        <h1 class="titulo-hero">Seguros Zurbano</h1>
+        <p class="texto-hero">Protegemos tu futuro y el de tu empresa en el corazón de Chamberí.</p>
+        <a href="#contacto" class="boton-hero">SOLICITAR PRESUPUESTO</a>
+    </div>
+</header>
+
+   <section id="agente-info">
+        <div class="perfil-agente">
+            <img src="img/blanco.png" alt="Jose Luis Blanco" class="avatar-agente">
+            
+            <div class="datos-agente">
+                <h2>Jose Luis Blanco</h2>
+                <p>Tu asesor personal en Seguros y Finanzas</p>
+                <div class="vias-contacto">
+                    <a href="tel:+34677320896"><i class="fa-solid fa-phone"></i> +34 677 32 08 96</a>
+                    <a href="mailto:Jlblan1@mapfre.com"><i class="fa-solid fa-envelope"></i> Jlblan1@mapfre.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <div class="principal-titulo">
+            <h2>Nuestros Seguros</h2>
+            <p>Protección total para particulares y profesionales</p>
+        </div>
+        
+        <div class="contenedor-grid">
+            <div class="tarjeta">
+                <i class="fa-solid fa-building-shield"></i>
+                <h3>Seguros de Empresa</h3>
+                <p>Responsabilidad Civil, multirriesgo industrial, flotas de vehículos y protección de autónomos.</p>
+            </div>
+            <div class="tarjeta">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Financiero y Ahorro</h3>
+                <p>Planes de pensiones, fondos de inversión y seguros de ahorro con la garantía de MAPFRE.</p>
+            </div>
+            <div class="tarjeta">
+                <i class="fa-solid fa-house-chimney"></i>
+                <h3>Hogar y Vida</h3>
+                <p>Aseguramos tu vivienda y el futuro de los tuyos con las mejores coberturas del mercado.</p>
+            </div>
+            <div class="tarjeta">
+                <i class="fa-solid fa-car-burst"></i>
+                <h3>Salud y Auto</h3>
+                <p>Asistencia sanitaria de primer nivel y seguros de coche/moto totalmente personalizados.</p>
+            </div>
+        </div>      
+    </section>
+
+    <section id="contacto">
+        <div class="form-contenedor">
+            <h2>Solicita Presupuesto</h2>
+            <p>Envía tus datos y Jose Luis Blanco te llamará personalmente.</p>
+            
+           <form id="form-solicitud" class="formulario">
+                <input type="text" name="nombre" placeholder="Nombre completo" required>
+                <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                <input type="tel" name="telefono" placeholder="Teléfono (ej: 600 00 00 00)">
+                <textarea name="mensaje" placeholder="¿En qué tipo de seguro estás interesado?" rows="5" required></textarea>
+                
+                <!-- Botón personalizado para subir archivo -->
+                <label class="custom-file-upload">
+                    <i class="fa-solid fa-cloud-arrow-up" style="margin-right: 8px;"></i> 
+                    <span>Adjuntar documento (PDF, JPG, PNG)</span>
+                    <input type="file" name="documento" accept=".pdf,.jpg,.png,.jpeg" onchange="this.previousElementSibling.textContent = this.files[0].name">
+                </label>
+
+                <button type="submit">ENVIAR CONSULTA A JOSE LUIS</button>
+            </form>
+            
+        </div>
+    </section>
+
+      <footer class="footer-final">
+        <div class="columna">
+            <h4>Seguros Zurbano</h4>
+            <p>Jose Luis Blanco - Agente MAPFRE</p>
+            <p>Seguros para particulares, autónomos y empresas.</p>
+        </div>
+        <div class="columna">
+            <h4>Teléfono 24h Mapfre</h4>
+            <p><i class="fa-solid fa-phone-flip"></i> 918 365 365</p>
+        </div>
+       <div class="columna">
+            <p>&copy; 2026 | <a href="legal.html" style="color:#fff; text-decoration:underline;">Términos Legales</a></p>
+            <p>Chamberí, Madrid.</p>
+    </div>
+    </footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

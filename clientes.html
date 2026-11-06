@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes | Seguros Zurbano</title>
+    <link rel="stylesheet" type="text/css" href="estilos/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body data-pagina="clientes">
+    <nav class="navbar">
+        <span id="logo" style="color: white; font-weight: bold; font-size: 20px;">PANEL DE GESTIÓN</span>
+        <input type="checkbox" id="check">
+        <label for="check" id="checkboton"><i class="fa-solid fa-bars"></i></label>
+        <ul class="menu-items">
+            <li><a href="solicitudes.html" class="btn-nav-especial" style="background: transparent !important; border: none !important;"><i class="fa-solid fa-inbox"></i> Bandeja</a></li>
+            <li><a href="usuarios.html" class="btn-nav-especial" style="background: transparent !important; border: none !important;"><i class="fa-solid fa-users-gear"></i> Equipo</a></li>
+            <li><a href="login.html" class="btn-nav-especial"  data-salir><i class="fa-solid fa-right-from-bracket"></i> Salir</a></li>
+        </ul>
+    </nav>
+
+    <div class="panel-container">
+        <div class="panel-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <div>
+                <h2 style="color: #D32F2F;"><i class="fa-solid fa-address-book"></i> Agenda de Clientes</h2>
+                <p style="font-size: 14px; color: #666;">Listado completo de clientes registrados en el sistema.</p>
+            </div>
+            <a href="nuevoCliente.html" class="btn-actualizar-ios" style="text-decoration: none;">
+                <i class="fa-solid fa-user-plus"></i> Añadir Cliente
+            </a>
+        </div>
+        <p id="error" style="color: #D32F2F; background: rgba(211,47,47,0.1); padding: 10px; border-radius: 10px; margin-bottom: 15px; font-weight: bold; display:none;"></p>
+        <p id="exito" style="color: #2e7d32; background: rgba(76,175,80,0.1); padding: 10px; border-radius: 10px; margin-bottom: 15px; font-weight: bold; display:none;"></p>
+        <table>
+            <thead>
+                <tr><th>Nombre y Apellidos</th><th>Email</th><th>Teléfono</th><th style="text-align: center;">Acciones</th></tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

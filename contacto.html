@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Seguros Zurbano</title>
+    <link rel="stylesheet" type="text/css" href="estilos/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body data-pagina="contacto">
+
+    <nav class="navbar">
+        <a href="index.html" id="logo">SEGUROS ZURBANO</a> 
+        <input type="checkbox" id="check"> 
+        <label for="check" id="checkboton"><i class="fa-solid fa-bars"></i></label>
+        
+        <ul class="menu-items">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="historia.html">Historia</a></li>   
+            <li><a class="actual" href="contacto.html">Contacto</a></li> 
+        </ul>
+    </nav>
+
+    <main class="seccion-contacto-pagina">
+        <div class="contenedor-dos-columnas">
+            
+            <div class="columna-mapa">
+                <div class="cabecera-columna">
+                    <i class="fa-solid fa-location-dot" style="font-size: 2.5rem; color: #D32F2F; margin-bottom: 15px;"></i>
+                    <h2>Nuestra Ubicación</h2>
+                    <p>Visítanos en nuestra oficina central en Madrid.</p>
+                </div>
+                <div class="mapa-wrapper">
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.01969582929!2d-3.6963669241719734!3d40.430562771437394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4229c6863119d1%3A0x7e2fd7982fed370d!2sMapfre!5e0!3m2!1ses!2ses!4v1772542334589!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="datos-sucursal">
+                    <p><strong>Dirección:</strong> Calle de Zurbano, Chamberí, Madrid.</p>
+                    <p><strong>Horario:</strong> L-V: 09:00 - 18:00</p>
+                </div>
+            </div>
+
+            <div class="form-contenedor">
+                <i class="fa-solid fa-envelope-open-text" style="font-size: 3rem; color: #D32F2F; margin-bottom: 20px;"></i>
+                <h2>Solicita tu Presupuesto</h2>
+                <p>Rellena el formulario y Jose Luis Blanco se pondrá en contacto contigo a la mayor brevedad.</p>
+                
+             <form id="form-solicitud" class="formulario">
+                <input type="text" name="nombre" placeholder="Nombre completo" required>
+                <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                <input type="tel" name="telefono" placeholder="Teléfono (ej: 600 00 00 00)">
+                <textarea name="mensaje" placeholder="¿En qué tipo de seguro estás interesado?" rows="8" required></textarea>
+                
+                <!-- Botón personalizado para subir archivo -->
+                <label class="custom-file-upload">
+                    <i class="fa-solid fa-cloud-arrow-up" style="margin-right: 8px;"></i> 
+                    <span>Adjuntar documento (PDF, JPG, PNG)</span>
+                    <input type="file" name="documento" accept=".pdf,.jpg,.png,.jpeg" onchange="this.previousElementSibling.textContent = this.files[0].name">
+                </label>
+
+                <button type="submit">ENVIAR CONSULTA PERSONALIZADA</button>
+            </form>        
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer-final">
+        <div class="columna">
+            <h4>Seguros Zurbano & Chamberí</h4>
+            <p>Jose Luis Blanco - Agente MAPFRE</p>
+            <p>Seguros para particulares, autónomos y empresas.</p>
+        </div>
+        <div class="columna">
+            <h4>Teléfono 24h Mapfre</h4>
+            <p><i class="fa-solid fa-phone-flip"></i> 918 365 365</p>
+        </div>
+        <div class="columna">
+            <p>&copy; 2026 | <a href="legal.html" style="color:#fff; text-decoration:underline;">Términos Legales</a></p>
+            <p>Chamberí, Madrid.</p>
+        </div>
+    </footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

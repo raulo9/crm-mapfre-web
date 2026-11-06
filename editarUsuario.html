@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Trabajador | Seguros Zurbano</title>
+    <link rel="stylesheet" type="text/css" href="estilos/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body data-pagina="editarUsuario">
+    <nav class="navbar">
+        <span id="logo" style="color: white; font-weight: bold; font-size: 20px;">EDITAR TRABAJADOR</span>
+        <input type="checkbox" id="check">
+        <label for="check" id="checkboton"><i class="fa-solid fa-bars"></i></label>
+        <ul class="menu-items">
+            <li><a href="usuarios.html" class="btn-nav-especial" ><i class="fa-solid fa-xmark"></i> Cancelar</a></li>
+        </ul>
+    </nav>
+
+    <div class="panel-container" style="max-width: 500px; margin-top: 120px;">
+        <h2 style="color: #D32F2F; margin-bottom: 20px;"><i class="fa-solid fa-user-pen"></i> Modificar datos del equipo</h2>
+        <p id="error" style="color: #D32F2F; background: rgba(211,47,47,0.1); padding: 10px; border-radius: 10px; margin-bottom: 15px; font-weight: bold; display:none;"></p>
+        <form id="form" class="formulario">
+            <label style="display:block; text-align:left; margin-bottom:5px; font-weight:bold;">Nombre y Apellidos</label>
+            <input type="text" name="nombre" required>
+            <label style="display:block; text-align:left; margin-bottom:5px; font-weight:bold;">Email Corporativo</label>
+            <input type="email" name="email" required>
+            <label style="display:block; text-align:left; margin-bottom:5px; font-weight:bold;">Contraseña de Acceso</label>
+            <input type="text" name="password" required>
+            <button type="submit" style="margin-top:20px;"><i class="fa-solid fa-floppy-disk"></i> ACTUALIZAR DATOS</button>
+        </form>
+    </div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
