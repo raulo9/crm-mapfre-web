@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/34475769/README.md)
 ```bash
 raul@madrid:~$ cat crm-mapfre-web/README.md
 ```
