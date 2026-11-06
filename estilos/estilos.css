@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* =======================================================
+    1. RESET Y TIPOGRAFÍA
+   ======================================================= */
+* {
+    margin: 0; padding: 0; box-sizing: border-box; text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body, input, textarea, button, select, h1, h2, h3, h4, p, span, a, div {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body { min-height: 100vh; display: flex; flex-direction: column; background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); }
+html { overflow-y: scroll; }
+
+/* =======================================================
+    2. NAVEGACIÓN (Cristal)
+   ======================================================= */
+.navbar {
+    background: rgba(211, 47, 47, 0.85) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    height: 80px;
+    width: 100%;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 50px;
+    position: fixed;
+    top: 0;
+    z-index: 2000;
+}
+
+#logo { font-size: 20px; color: #FFFFFF; font-weight: bold; }
+#check, #checkboton { display: none; }
+
+.menu-items {
+    display: flex;
+    list-style: none;
+    gap: 15px; 
+    align-items: center;
+}
+
+.menu-items li a {
+    color: #FFFFFF;
+    padding: 10px 15px; 
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.menu-items li a:hover, .menu-items li a.actual {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* =======================================================
+    3. BOTONES DE MENÚ PREMIUM
+   ======================================================= */
+.btn-nav-especial {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.5) !important;
+    border-radius: 20px !important;
+    padding: 8px 16px !important;
+    backdrop-filter: blur(8px);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+.btn-nav-especial:hover {
+    background: #FFFFFF !important;
+    color: #D32F2F !important; 
+    border-color: #FFFFFF !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-2px);
+}
+
+/* =======================================================
+    4. SECCIONES DE LA WEB (Inicio, Servicios, Historia...)
+   ======================================================= */
+#hero-section {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(139, 0, 0, 0.6)), url('../img/sedeMapfre.jpeg');
+    background-size: cover; background-position: center; height: 70vh;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    margin-top: 80px; padding: 0 20px;
+}
+.hero-contenido { max-width: 900px; animation: entradaSuave 1s ease-out; }
+.subtitulo-hero { display: block; color: #f1f1f1; font-size: 0.9rem; letter-spacing: 3px; font-weight: 700; margin-bottom: 10px; text-transform: uppercase; }
+.titulo-hero { color: #FFFFFF; font-size: 4rem; font-weight: 800; margin-bottom: 15px; text-shadow: 0 4px 15px rgba(0,0,0,0.5); line-height: 1.1; }
+.texto-hero { color: #ddd; font-size: 1.3rem; margin-bottom: 30px; font-weight: 400; max-width: 700px; margin-left: auto; margin-right: auto; }
+@keyframes entradaSuave { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+#agente-info { padding: 80px 20px; display: flex; justify-content: center; }
+.perfil-agente { background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.8); border-radius: 25px; padding: 30px; display: flex; align-items: center; gap: 25px; max-width: 800px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.perfil-agente i { font-size: 60px; color: #D32F2F; }
+.vias-contacto a { display: block; color: #D32F2F; font-weight: bold; margin-top: 10px; font-size: 1.1rem; }
+.avatar-agente { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+#servicios { padding: 80px 20px; margin-top: 80px; background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('../img/fondo.jpeg'); background-size: cover; background-position: center; background-attachment: fixed; }
+.principal-titulo { text-align: center; margin-bottom: 50px; }
+.principal-titulo h2 { color: #D32F2F; font-size: 2.5rem; margin-bottom: 10px; }
+.contenedor-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+.tarjeta { padding: 40px 30px; text-align: center; background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.8); border-radius: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: 0.3s; }
+.tarjeta:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); border-color: rgba(211, 47, 47, 0.4); }
+.tarjeta i { font-size: 50px; color: #D32F2F; margin-bottom: 20px; }
+
+.seccion-historia-unica, .seccion-legal-unica { padding: 120px 20px 80px 20px; display: flex; justify-content: center; align-items: center; flex: 1; }
+.tarjeta-perfil-profesional, .tarjeta-legal-profesional { background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.8); max-width: 900px; width: 100%; display: flex; flex-wrap: wrap; border-radius: 25px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.bloque-foto { flex: 1; min-width: 380px; }
+.bloque-foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.bloque-contenido, .bloque-contenido-legal { flex: 1.5; padding: 50px; }
+.nombre-titulo, .nombre-titulo-legal { color: #D32F2F; font-size: 2.5rem; font-weight: 700; margin-bottom: 5px; }
+.subtitulo-profesional, .subtitulo-legal { color: #555; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 25px; font-weight: 700; }
+.texto-biografia p, .texto-legal-cuerpo p { font-size: 1rem; line-height: 1.7; color: #444; margin-bottom: 15px; }
+.frase-agente, .frase-legal { border-left: 4px solid #D32F2F; padding-left: 20px; font-style: italic; color: #666; margin: 25px 0; }
+.badges-certificados, .badges-legales { display: flex; gap: 15px; margin-top: 30px; }
+.badge-item, .badge-item-legal { background: rgba(255,255,255,0.5); padding: 15px; border-radius: 15px; display: flex; align-items: center; gap: 10px; flex: 1; border: 1px solid rgba(255,255,255,0.8); }
+.badge-item i, .badge-item-legal i { color: #D32F2F; font-size: 20px; }
+
+.seccion-contacto-pagina { padding: 120px 20px 60px; min-height: 80vh; display: flex; justify-content: center; }
+.form-contenedor { background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.8); padding: 40px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); width: 100%; max-width: 600px; margin: 0 auto; text-align: center; }
+.contenedor-dos-columnas { display: flex; gap: 40px; max-width: 1200px; width: 100%; align-items: flex-start; }
+.columna-mapa { flex: 1; text-align: center; background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.8); padding: 40px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.contenedor-dos-columnas .form-contenedor { flex: 1; margin: 0; max-width: none; }
+.mapa-wrapper { margin: 20px 0; border-radius: 15px; overflow: hidden; border: 1px solid rgba(0,0,0,0.1); }
+.datos-sucursal { text-align: left; margin-top: 20px; color: #555; line-height: 1.6; }
+
+/* Formularios estéticos */
+.formulario { display: flex; flex-direction: column; gap: 15px; margin-top: 30px; }
+.formulario input, .formulario textarea { padding: 15px; font-size: 16px; border-radius: 15px; border: 1px solid rgba(0,0,0,0.1); background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); transition: 0.3s; }
+.formulario input:focus, .formulario textarea:focus { background: white; border-color: #D32F2F; outline: none; box-shadow: 0 0 0 3px rgba(211,47,47,0.1); }
+.custom-file-upload { display: inline-block; padding: 15px; cursor: pointer; background: rgba(255, 255, 255, 0.7); border: 2px dashed rgba(211, 47, 47, 0.4); border-radius: 15px; font-weight: 600; color: #555; text-align: center; transition: all 0.3s ease; margin-top: 5px; }
+.custom-file-upload:hover { background: rgba(255, 255, 255, 1); border-color: #D32F2F; color: #D32F2F; box-shadow: 0 4px 15px rgba(211, 47, 47, 0.1); }
+.custom-file-upload input[type="file"] { display: none; }
+
+/* =======================================================
+    5. UNIFICACIÓN DE BOTONES
+   ======================================================= */
+button, input[type="submit"], .boton-hero, .btn-accion, .btn-actualizar-ios, .btn-ver, .btn-eliminar, a[href="solicitudes.html"]:not(.btn-nav-especial) {
+    border-radius: 25px !important; padding: 12px 24px !important; font-weight: 700 !important; text-transform: uppercase !important; font-size: 14px !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; gap: 8px !important; border: 2px solid transparent !important; transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important; text-decoration: none !important; cursor: pointer !important;
+}
+
+/* Botones Rojos */
+button[type="submit"], .boton-hero, .btn-accion, .btn-actualizar-ios, .btn-ver { background: #D32F2F !important; color: #FFFFFF !important; border-color: #D32F2F !important; }
+button[type="submit"]:hover, .boton-hero:hover, .btn-accion:hover, .btn-actualizar-ios:hover, .btn-ver:hover { background: #FFFFFF !important; color: #D32F2F !important; box-shadow: inset 0 0 0 2px #D32F2F, 0 8px 25px rgba(211, 47, 47, 0.25) !important; transform: translateY(-2px) !important; }
+
+/* Botones Oscuros */
+.btn-eliminar, a[href="solicitudes.html"]:not(.btn-nav-especial), button[name="nuevo_comentario"] { background: #1A1A1A !important; color: #FFFFFF !important; border-color: #1A1A1A !important; }
+.btn-eliminar:hover, a[href="solicitudes.html"]:not(.btn-nav-especial):hover, button[name="nuevo_comentario"]:hover { background: #FFFFFF !important; color: #1A1A1A !important; box-shadow: inset 0 0 0 2px #1A1A1A, 0 8px 25px rgba(26, 26, 26, 0.25) !important; transform: translateY(-2px) !important; }
+
+/* =======================================================
+    6. PANEL DE GESTIÓN Y LOGIN
+   ======================================================= */
+.panel-container { margin: 130px auto 60px; max-width: 1100px; width: 90%; padding: 40px; }
+table { width: 100%; border-collapse: collapse; margin-top: 30px; background: rgba(255, 255, 255, 0.4); border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+th, td { padding: 16px 20px; text-align: left; border-bottom: 1px solid rgba(0,0,0,0.05); vertical-align: middle; }
+th { background-color: rgba(211, 47, 47, 0.95); color: white; font-weight: 700; text-transform: uppercase; font-size: 13px; letter-spacing: 1px; }
+tr:hover td { background-color: rgba(255, 255, 255, 0.9); transition: background 0.3s ease; }
+
+.login-container { display: flex; justify-content: center; align-items: center; min-height: calc(100vh - 80px); margin-top: 80px; padding: 20px; width: 100%; }
+.login-box { width: 100%; max-width: 400px; background: rgba(255, 255, 255, 0.85); padding: 40px; border-radius: 25px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); text-align: center; margin: 0 auto; }
+.login-box form { display: flex; flex-direction: column; gap: 15px; width: 100%; }
+.login-box input { width: 100%; text-align: center; }
+
+/* ----- ETIQUETAS DE ESTADO Y DETALLES (Versión Minimalista) ----- */
+.badge-estado { 
+    padding: 4px 10px; 
+    border-radius: 20px; 
+    font-weight: bold; 
+    font-size: 11px; 
+    display: inline-block; 
+}
+.badge-pendiente { background: rgba(255, 152, 0, 0.1); color: #FF9800; border: 1px solid rgba(255, 152, 0, 0.3); }
+.badge-proceso { background: rgba(33, 150, 243, 0.1); color: #2196F3; border: 1px solid rgba(33, 150, 243, 0.3); }
+.badge-gestionada { background: rgba(76, 175, 80, 0.1); color: #4CAF50; border: 1px solid rgba(76, 175, 80, 0.3); }
+
+/* Contenedor mucho más compacto */
+.contenedor-estado-glass { 
+    background: rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(8px); 
+    border: 1px solid rgba(0,0,0,0.05); 
+    padding: 12px 20px; 
+    border-radius: 50px; /* Estilo píldora */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    display: inline-block; /* Ya no ocupa todo el ancho */
+    margin-bottom: 25px;
+}
+
+.form-estado { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+}
+
+.etiqueta-estado { 
+    font-size: 13px; 
+    font-weight: 700; 
+    color: #888; 
+    text-transform: uppercase; 
+    letter-spacing: 0.5px;
+}
+
+/* El selector ahora es pequeño y fino */
+.select-ios { 
+    padding: 6px 12px; 
+    border-radius: 8px; 
+    border: 1px solid #ddd; 
+    font-size: 13px; 
+    font-weight: 600; 
+    color: #444; 
+    background: white; 
+    cursor: pointer;
+    outline: none;
+}
+
+/* El botón de actualizar se vuelve un icono sutil */
+.contenedor-estado-glass .btn-actualizar-ios {
+    padding: 6px 12px !important;
+    font-size: 11px !important;
+    border-radius: 8px !important;
+    height: 32px;
+}
+/* =======================================================
+    7. FOOTER
+   ======================================================= */
+.footer-final { background: #1A1A1A; color: white; padding: 40px 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; margin-top: auto; }
+.footer-final p { font-size: 14px; line-height: 1.6; margin-bottom: 5px; }
+
+/* =======================================================
+    8. RESPONSIVE DEFINITIVO (PANTALLAS PEQUEÑAS)
+   ======================================================= */
+@media (max-width: 950px) {
+    /* LA HAMBURGUESA MAGICA */
+    #checkboton { display: block; color: white; font-size: 30px; cursor: pointer; }
+    .menu-items { position: fixed; width: 100%; height: 100vh; background: rgba(211, 47, 47, 0.95); backdrop-filter: blur(15px); top: 80px; left: -100%; flex-direction: column; padding-top: 50px; transition: left 0.5s ease; overflow-y: auto; z-index: 1000; }
+    
+    /* El checkbox activa el menú hacia la derecha */
+    #check:checked ~ .menu-items { left: 0; }
+    
+    .menu-items li { margin: 20px 0; text-align: center; width: 100%; }
+    
+    /* Navbar móvil ajustado */
+    .navbar { padding: 0 20px !important; }
+    #logo { font-size: 18px !important; }
+    
+    /* Textos generales adaptados */
+    .titulo-hero { font-size: 2.5rem !important; }
+    .texto-hero { font-size: 1.1rem !important; }
+    .nombre-titulo, .nombre-titulo-legal { font-size: 2rem !important; text-align: center; }
+    
+    /* Cajas y Padding para que nada se desborde */
+    .seccion-historia-unica, .seccion-legal-unica, .seccion-contacto-pagina, #servicios, #agente-info { padding: 40px 15px !important; margin-top: 40px !important; }
+    .tarjeta-perfil-profesional, .tarjeta-legal-profesional { max-width: 100% !important; margin: 0 10px; }
+    .bloque-contenido, .bloque-contenido-legal { padding: 25px !important; text-align: center; }
+    
+    /* Layouts a 1 columna en móvil */
+    .contenedor-dos-columnas { flex-direction: column; align-items: stretch; gap: 20px; }
+    .columna-mapa, .form-contenedor { width: 100% !important; padding: 25px 15px !important; margin: 0 !important; box-sizing: border-box; }
+    .perfil-agente { flex-direction: column; text-align: center; padding: 20px !important; }
+    .bloque-foto { min-width: 100% !important; height: 250px !important; }
+
+    /* Ajustes Panel de Gestión y Tablas */
+    .panel-container, .detalle-container { margin: 100px 10px 40px !important; padding: 20px 15px !important; width: auto !important; }
+    table { display: block; width: 100%; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
+    th, td { padding: 12px 10px; font-size: 13px; }
+    
+    /* Botones más amigables para el dedo en pantallas estrechas */
+    button, input[type="submit"], .boton-hero, .btn-accion, .btn-actualizar-ios, .btn-ver, .btn-eliminar { width: 100% !important; margin-top: 10px; }
+    
+    /* Botones del navbar que bajaron al menú */
+    .btn-nav-especial { display: inline-block !important; width: 80% !important; text-align: center; padding: 15px !important; }
+}
